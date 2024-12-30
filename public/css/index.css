@@ -2,4 +2,5 @@ body{
     background-color: #ebebeb;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }

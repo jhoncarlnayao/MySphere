@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <title>Document</title>
+    <title>MySpehere</title>
 </head>
 <body>
     @include('Header.header')
     @include('Boxes.center')
+    @include('Boxes.side')
+   
 
 </body>
 </html>

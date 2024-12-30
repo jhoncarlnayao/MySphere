@@ -7,7 +7,7 @@
 
 .container-center-boxes{
     position: relative;
-    top: 7pc;
+    top: 8pc;
 }
 
 .box1{
@@ -74,7 +74,7 @@
 .button {
     background-color: transparent;
     color: #ffffff;
-    padding: 15px 70px;
+    padding: 15px 90px;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
@@ -179,13 +179,65 @@
 
 .box3{
     width: 700px;
-    height: 200px;
+    height: 400px;
     flex-shrink: 0;
     border-radius: 20px;
     background-color: white;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.20);
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 40px;
 }
 
+.wide-box {
+    width: 650px;
+    height: 230px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background-color: black;
+    overflow: hidden; 
+}
+
+.wide-box img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 15px; 
+}
+
+
+#button3 {
+    padding: 25px 270px;
+    background: #fff;
+    border: 1px solid #121212;
+    color: #121212;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 14px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  #button3::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #121212;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.5s ease;
+  }
+  #button3:hover {
+    color: #fff;
+  }
+  #button3:hover::after {
+    bottom: 0;
+    border-radius: 0;
+  }
+  
