@@ -4,3 +4,44 @@ body{
     width: 100vw;
     overflow: hidden;
 }
+#content-wrapper {
+    transition: opacity 0.5s ease;
+}
+
+#content-wrapper.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#gif-container {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it is on top of other content */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#gif-container img {
+    max-width: 500px; /* Increase the size of the GIF */
+    max-height: 500px; /* Increase the height of the GIF */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Add animation if needed */
+@keyframes gifAppear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#gif-container.show {
+    display: block;
+    animation: gifAppear 0.5s ease-in-out;
+}
